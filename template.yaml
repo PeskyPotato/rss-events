@@ -156,7 +156,7 @@ Resources:
       CodeUri: lambdas/process-channel
       Timeout: 60
       Policies:
-        - DynamoDBReadPolicy:
+        - DynamoDBCrudPolicy:
             TableName: !Ref ItemsTable
         - SQSPollerPolicy:
             QueueName: !GetAtt ChannelQueue.QueueName
