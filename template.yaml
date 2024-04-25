@@ -159,7 +159,7 @@ Resources:
       Timeout: 60
       Description: Checks the RSS feed for new content
       Policies:
-        - DynamoDBReadPolicy:
+        - DynamoDBCrudPolicy:
             TableName: !Ref ItemsTable
         - SQSPollerPolicy:
             QueueName: !GetAtt ChannelQueue.QueueName
